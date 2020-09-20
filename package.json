@@ -1,0 +1,27 @@
+{
+  "name": "MirasFrontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "dev":"next",
+      "build":"next build",
+      "start":"next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YusufArda27/MirasFrontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YusufArda27/MirasFrontend/issues"
+  },
+  "homepage": "https://github.com/YusufArda27/MirasFrontend#readme",
+  "dependencies": {
+    "next": "^9.5.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
