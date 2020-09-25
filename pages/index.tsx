@@ -12,7 +12,6 @@ export default function FirstPost() {
       </p>
       <div>
         <Link href="random"><button>Rastgele bir eser</button></Link>
-        <Link href="all"><button>Tüm eserler</button></Link>
       </div>
       
     </Layout>
