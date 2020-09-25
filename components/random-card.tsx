@@ -7,40 +7,23 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
-
-export default function Profile() {
-  const classes = useStyles();
-  const {data,error} = useSWR("https://miras-backend.herokuapp.com/random");
+const Profile = function Profile() {
+  
+  const {data, error, mutate} = useSWR("https://miras-backend.herokuapp.com/random");
+  
   if (error) return <div>failed to load</div>
   if (!data) return <div>loading...</div>
   return (
-  
     
-    <Card className={classes.root}>
+    <Card>
       <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
+        <Typography color="textSecondary" gutterBottom>
           Eserin Adı      
         </Typography>
         <Typography variant="h5" component="h2">
           {data.title}
         </Typography>
-        <Typography className={classes.pos} color="textSecondary">
+        <Typography  color="textSecondary">
           {data.adress}
           <br/>
           <br/>
@@ -49,7 +32,13 @@ export default function Profile() {
           {data.about}
         </Typography>
       </CardContent>
-      
+      <CardActions>
+        <Button onClick={()=> {mutate();}}>Sonraki</Button>
+      </CardActions>
     </Card>
   );
 }
+
+      
+    
+export default Profile;
