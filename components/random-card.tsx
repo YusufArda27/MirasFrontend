@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 import useSWR from "swr";
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -54,6 +55,7 @@ const Profile = function Profile() {
       
       <CardActions>
         <Button onClick={()=> {mutate();}}>Sonraki</Button>
+        <Button href={data.location} color="primary">Navigasona git</Button>
       </CardActions>
     </Card>
   );
