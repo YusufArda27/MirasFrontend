@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 });
 const Profile = function Profile() {
   const classes = useStyles();
-  const {data, error, mutate} = useSWR("https://mirasbackend.herokuapp.com/random");
+  const {data, error, mutate} = useSWR("https://mirasbackendl.herokuapp.com/random");
   
   if (error) return <div>failed to load</div>
   if (!data) return <div>loading...</div>
